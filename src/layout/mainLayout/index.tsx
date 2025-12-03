@@ -49,7 +49,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
                   onClick={() => {
                     localStorage.clear();
                     signOut({
-                      callbackUrl: '/job-list-candidate', // redirect setelah login sukses
+                      callbackUrl: '/login', // redirect setelah login sukses
                     });
                   }}
                 >

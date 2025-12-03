@@ -3,7 +3,6 @@
 import i18n from '@/config/i18n';
 import React, { useEffect } from 'react';
 import { I18nextProvider, useTranslation } from 'react-i18next';
-import Image from 'next/image';
 import LanguageDropdown from '@/components/ui/LanguageDropDown';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
