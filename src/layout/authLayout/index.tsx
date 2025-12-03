@@ -36,12 +36,12 @@ const AuthLayout = ({
       <div className='min-h-screen flex items-center justify-center bg-gray-100'>
         <div className='mx-5 w-[500px]     '>
           <div className='items-center flex justify-between'>
-            <Image
+            {/* <Image
               src='/icons/logo.svg'
               alt='logo'
               width={100}
               height={100}
-            />
+            /> */}
             <LanguageDropdown />
           </div>
           <div className='mt-4  rounded-md min-h-[334px] p-10 shadow-lg flex flex-col '>

@@ -13,6 +13,12 @@ export const loginSchema = userSchema.pick({
   password: true,
 });
 
+export const registerSchema = z.object({
+  name: z.string().min(2, 'Nama terlalu pendek.'),
+  email: z.string().email('Email tidak valid.'),
+  password: z.string().min(6, 'Minimal 6 karakter.'),
+});
+
 export const createJobSchema = z.object({
   title: z.string().nonempty('Title is required'),
   job_type: z.string().nonempty('Job type is required'),

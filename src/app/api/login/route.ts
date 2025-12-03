@@ -1,27 +1,10 @@
 import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
+import { users } from '../dummyData/user';
 
 const secretKey = process.env.NEXT_PUBLIC_JWT_SECRET_KEY || 'your-secret-key';
 const refreshTokenSecret =
   process.env.NEXT_PUBLIC_JWT_REFRESH_SECRET_KEY || 'your-refresh-secret-key';
-
-// Dummy User Data
-const users = [
-  {
-    id: 1,
-    name: 'Admin Recruiter',
-    email: 'admin@example.com',
-    password: 'admin123',
-    role: 'admin',
-  },
-  {
-    id: 2,
-    name: 'Applicant User',
-    email: 'applicant@example.com',
-    password: 'applicant123',
-    role: 'applicant',
-  },
-];
 
 // Generate Access and Refresh Tokens
 const generateTokens = (user: {
@@ -91,6 +74,7 @@ export async function POST(request: Request) {
         name: user.name,
         email: user.email,
         role: user.role,
+        provider: user.provider,
       },
     },
     { status: 200 }

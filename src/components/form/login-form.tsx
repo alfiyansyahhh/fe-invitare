@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { loginSchema } from '@/schemas';
 import { Button } from '../ui/button';
 import { signIn } from 'next-auth/react';
+import Link from 'next/link';
 
 const LoginForm = () => {
   const [isPending, setisPending] = useState(false);
@@ -55,7 +56,7 @@ const LoginForm = () => {
           onSubmit={handleSubmit}
           className='space-y-6'
         >
-          <div className='space-y-5'>
+          <div className='space-y-5 relative'>
             <FormInput
               control={form.control}
               name='email'
@@ -83,6 +84,25 @@ const LoginForm = () => {
             >
               {t('Masuk')}
             </Button>
+            <Button
+              type='button'
+              variant='outline'
+              loading={isPending}
+              className='w-full rounded-[5px] h-[50px]'
+              onClick={() => signIn('google')}
+            >
+              {t('Masuk Dengan Google')}
+            </Button>
+
+            <div className='text-center'>
+              Don’t have an account? Let’s
+              <Link
+                className='text-end font-bold text-[15px] ml-2'
+                href={'/register'}
+              >
+                Sign up
+              </Link>
+            </div>
           </div>
         </form>
       </Form>
