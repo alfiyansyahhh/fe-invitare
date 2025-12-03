@@ -30,7 +30,7 @@ const AuthLayout = ({
       <div className='min-h-screen flex flex-col md:flex-row bg-linear-to-br from-gray-100 to-gray-200 overflow-hidden'>
         <div className='w-full md:w-1/2 h-64 md:h-screen relative overflow-hidden'>
           <img
-            src='https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?_gl=1*1gy4nir*_ga*MjkwMjEwNDUyLjE3NjQ3NTk3MzE.*_ga_8JE65Q40S6*czE3NjQ3NTk3MzEkbzEkZzEkdDE3NjQ3NTk3MzYkajU1JGwwJGgw'
+            src='/images/invitation-hero.jpg'
             alt='Invitation'
             className='w-full h-full object-cover rounded-r-3xl'
           />
@@ -50,7 +50,7 @@ const AuthLayout = ({
             transition: { duration: 0.3, ease: 'easeOut' },
           }}
         >
-          <div className='w-full max-w-md bg-white rounded-lg shadow-lg p-10 overflow-hidden'>
+          <div className='w-full max-w-md bg-white rounded-3xl shadow-lg p-10 overflow-hidden'>
             <div className='flex items-center justify-between mb-6'>
               <h1 className='text-xl font-bold'>{t(title)}</h1>
               <LanguageDropdown />
