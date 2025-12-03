@@ -33,19 +33,14 @@ const AuthLayout = ({
 
   return (
     <I18nextProvider i18n={i18n}>
-      <div className='min-h-screen flex items-center justify-center bg-gray-100'>
-        <div className='mx-5 w-[500px]     '>
-          <div className='items-center flex justify-between'>
-            {/* <Image
-              src='/icons/logo.svg'
-              alt='logo'
-              width={100}
-              height={100}
-            /> */}
-            <LanguageDropdown />
-          </div>
-          <div className='mt-4  rounded-md min-h-[334px] p-10 shadow-lg flex flex-col '>
-            <h1 className='text-xl font-bold mt-4'>{t(title)}</h1>
+      <div className='min-h-screen flex items-center justify-center bg-gray-100 '>
+        <div className=' w-[400px]  border  rounded-md '>
+          <div className='mt-4  rounded-md  px-10 py-5 shadow-lg flex flex-col '>
+            <div className='flex items-center justify-between'>
+              <h1 className='text-xl font-bold '>{t(title)}</h1>
+              <LanguageDropdown />
+            </div>
+
             <div className='mt-4'>{children}</div>
           </div>
         </div>

@@ -16,7 +16,7 @@ function Input({
         {
           'border-red-500 focus-visible:border-red-500 focus-visible:ring-red-500 ':
             isError,
-          'focus-visible:border-[#FBC037] focus-visible:ring-[#FBC037]':
+          'focus-visible:border-[#212126] focus-visible:ring-[#212126]':
             !isError,
         },
         'aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive',

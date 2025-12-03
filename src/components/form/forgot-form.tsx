@@ -14,7 +14,7 @@ import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const LoginForm = () => {
+const ForgotForm = () => {
   const [isPending, setisPending] = useState(false);
 
   let { t } = useTranslation();
@@ -24,7 +24,6 @@ const LoginForm = () => {
     mode: 'onChange',
     defaultValues: {
       email: '',
-      password: '',
     },
   });
 
@@ -66,25 +65,6 @@ const LoginForm = () => {
               placeholder='Masukkan E-mail'
               isPending={isPending}
             />
-            <FormInput
-              control={form.control}
-              name='password'
-              label='Password'
-              type='password'
-              placeholder='Masukkan Kata Sandi'
-              isPending={isPending}
-              required
-              noShowError
-            />
-
-            <div className='text-end w-full -mt-3'>
-              <Link
-                href='/forgot'
-                className=' text-sm font-bold  underline-offset-4 hover:underline'
-              >
-                {t('Forgot your password?')}
-              </Link>
-            </div>
 
             <Button
               type='submit'
@@ -92,35 +72,15 @@ const LoginForm = () => {
               loading={isPending}
               className='w-full rounded-[5px] h-10'
             >
-              {t('Masuk')}
+              {t('Kirim')}
             </Button>
-            <div className='flex items-center '>
-              <hr className='grow border-gray-300' />
-              <span className='mx-2 text-gray-500'>{t('or')}</span>
-              <hr className='grow border-gray-300' />
-            </div>
-            <Button
-              type='button'
-              variant='outline'
-              loading={isPending}
-              className='w-full rounded-[5px] h-10'
-              onClick={() => signIn('google')}
-            >
-              <Image
-                src={'/img/googleIcon.png'}
-                alt={'asdasd'}
-                width={20}
-                height={20}
-              />
-              {t('Masuk Dengan Google')}
-            </Button>
+
             <div className='text-center'>
-              {t('Don’t have an account? Let’s')}
               <Link
-                className='text-end font-bold text-[15px] ml-2 underline-offset-4 hover:underline'
-                href={'/register'}
+                className='text-end font-bold text-[15px] ml-2'
+                href={'/login'}
               >
-                {t('Sign up')}
+                {t('Back Login')}
               </Link>
             </div>
           </div>
@@ -130,4 +90,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default ForgotForm;

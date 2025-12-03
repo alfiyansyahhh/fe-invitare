@@ -22,9 +22,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
     <div className='mx-auto overflow-hidden h-screen '>
       <div className=' shadow-md'>
         <div className='max-w-[1440px] h-16   items-center flex justify-between px-4  mx-auto '>
-          <div>
-            <DynamicBreadcrumb />
-          </div>
+          <div>Invitare{/* <DynamicBreadcrumb /> */}</div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

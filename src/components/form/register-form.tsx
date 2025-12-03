@@ -14,6 +14,7 @@ import { signIn, useSession } from 'next-auth/react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const RegisterForm = () => {
   const [isPending, setisPending] = useState(false);
@@ -96,7 +97,7 @@ const RegisterForm = () => {
             <FormInput
               control={form.control}
               name='name'
-              label='Nama'
+              label='Name'
               type='text'
               placeholder='Nama lengkap'
               isPending={isPending}
@@ -125,29 +126,41 @@ const RegisterForm = () => {
               type='submit'
               disabled={!form.formState.isValid}
               loading={isPending}
-              className='w-full rounded-[5px] h-[50px]'
+              className='w-full rounded-[5px] h-10'
             >
               {t('Daftar')}
             </Button>
+
+            <div className='flex items-center '>
+              <hr className='grow border-gray-300' />
+              <span className='mx-2 text-gray-500'>{t('or')}</span>
+              <hr className='grow border-gray-300' />
+            </div>
 
             {/* GOOGLE REGISTER BUTTON */}
             <Button
               type='button'
               variant='outline'
               loading={isPending}
-              className='w-full rounded-[5px] h-[50px]'
+              className='w-full rounded-[5px] h-10'
               onClick={() => signIn('google')}
             >
+              <Image
+                src={'/img/googleIcon.png'}
+                alt={'asdasd'}
+                width={20}
+                height={20}
+              />
               {t('Masuk Dengan Google')}
             </Button>
 
             <div className='text-center'>
-              Already have an account? Let’s
+              {t('Already have an account? Let’s')}
               <Link
-                className='text-end font-bold text-[15px] ml-2'
+                className='text-end font-bold text-[15px] ml-2 underline-offset-4 hover:underline'
                 href={'/login'}
               >
-                Login
+                {t('Masuk')}
               </Link>
             </div>
           </div>

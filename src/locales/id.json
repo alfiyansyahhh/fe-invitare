@@ -5,5 +5,14 @@
   "Password": "Kata Sandi",
   "Name is required": "Nama wajib diisi",
   "Invalid email address": "Alamat e-mail tidak valid",
-  "Password must be at least 6 characters": "Kata sandi harus terdiri dari minimal 6 karakter"
+  "Password must be at least 6 characters": "Kata sandi harus terdiri dari minimal 6 karakter",
+  "or": "atau",
+  "Name": "Nama",
+  "Forgot your password?": "Lupa Kata Sandi?",
+  "Forgot Password": "Lupa Kata Sandi",
+  "Don’t have an account? Let’s": "Belum punya akun? Mari",
+  "Sign up": "Daftar",
+  "Back Login": "Kembali Masuk",
+  "Already have an account? Let’s": "Sudah punya akun? Mari",
+  "Register": "Daftar"
 }
