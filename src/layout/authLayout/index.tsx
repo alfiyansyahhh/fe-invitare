@@ -22,11 +22,11 @@ const AuthLayout = ({
   useEffect(() => {
     if (status === 'authenticated') {
       if (session?.user?.role === 'admin') {
-        router.push('/job-list');
+        router.push('/home');
       }
 
       if (session?.user?.role === 'applicant') {
-        router.push('/job-list-candidate');
+        router.push('/home');
       }
     }
   }, [status, router]);
