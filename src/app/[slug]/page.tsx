@@ -1,4 +1,3 @@
-'use client';
 import { getTemplateComponent } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 
@@ -8,6 +7,8 @@ export default async function InvitationPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
+  console.log(slug, 'slug');
 
   const raw = typeof window !== 'undefined' && localStorage.getItem(slug);
 

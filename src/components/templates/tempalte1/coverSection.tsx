@@ -6,10 +6,12 @@ const CoverSection = ({
   bannerVariants,
   onOpen,
   guestName,
+  Titlename,
 }: {
   bannerVariants: any;
   onOpen: any;
   guestName?: string; // tambahkan optional prop
+  Titlename: string;
 }) => {
   return (
     <>
@@ -241,7 +243,7 @@ const CoverSection = ({
                 </p>
               )}
 
-              <p className='mb-6 text-2xl'>Sarah & Dimas</p>
+              <p className='mb-6 text-2xl'>{Titlename}</p>
 
               <motion.button
                 className='px-6 py-3 bg-white cursor-pointer text-[#b88f5f] rounded-lg font-semibold hover:bg-gray-100 transition'
